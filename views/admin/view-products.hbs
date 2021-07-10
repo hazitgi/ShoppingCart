@@ -1,0 +1,40 @@
+<div class="container mt-5">
+
+
+    <table class="table display" id="view-products">
+        
+        <thead>
+            <tr>
+                <th scope="col">Product Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Price in ₹</th>
+                <th scope="col">image</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each product}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.catogery}}</td>
+                <td>{{this.price}}</td>
+                <td><img src="/images/product_images/{{this._id}}.jpg" alt="{{this.name}}"
+                        class="display-image"></td>
+                <td>
+                    <a href="/admin/edit_Product/{{this._id}}"  onclick="return confirm('Are you want to edit {{this.name}} ?')" data-toggle="tooltip"
+                        title="Edit Product">
+                        <i class="far fa-edit font-awesome-action"></i>
+                    </a>
+                    <a href="/admin/delete_Product/{{this._id}}"
+                        onclick="return confirm('Are you want to delete {{this.name}} ?')" data-toggle="tooltip"
+                        title="Delete!">
+                        <i class="far fa-trash-alt font-awesome-action"></i>
+                    </a>
+                </td>
+
+            </tr>
+            {{/each}}
+        
+        </tbody>
+    </table>
+</div>

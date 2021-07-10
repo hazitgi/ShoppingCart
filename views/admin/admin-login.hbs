@@ -1,0 +1,27 @@
+<body class="text-center">
+
+    <main class="form-signin">
+        <form action="/admin/login" method="POST" enctype="multipart/form-data">
+            <img class="mb-4" src="/images/admin/login.png" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 fw-normal">Admin Login</h1>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" id="username" name="username" placeholder="admin username">
+                <label for="username">Enter Username</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                <label for="password">Password</label>
+            </div>
+            <div class="checkbox mb-3">
+                {{#if adminLoginError}}
+                <p class="text-danger">{{adminLoginError}}</p>
+                {{/if}}
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        </form>
+    </main>
+
+
+
+</body>

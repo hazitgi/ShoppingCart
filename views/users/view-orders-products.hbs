@@ -1,0 +1,37 @@
+<section>
+    <div class="container ">
+        <div class="col d-flex justify-content-center align-items-center category-head m-4">
+            <p class="heading">Purchased Products</p>
+        </div>
+
+        <div class="row">
+            {{#each products}}
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card h-100">
+                    <img src="/images/product_images/{{this.img}}.jpg" class="card-img-top" alt="{{this.name}}">
+                    <div class="col item-head p-2 d-flex justify-content-center">{{this.name}}
+                    </div>
+                    <div class="card-body">
+                        <table class="w-100 table display" id="viewCart2">
+                            <tr>
+                                <td>Product Name</td>
+                                <td>{{this.name}}</td>
+                            </tr>
+                            <tr>
+                                <td>Product Price</td>
+                                <td>{{this.price}}</td>
+                            </tr>
+                            <tr>
+                                <td>Quantity</td>
+                                <td>{{this.quantity}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/" class="btn btn-success col-12">Buy More Products</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+</section>

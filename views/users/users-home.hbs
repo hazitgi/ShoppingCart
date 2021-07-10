@@ -1,0 +1,35 @@
+<section>
+    <div class="container ">
+        <div class="col d-flex justify-content-center align-items-center category-head m-4">
+            <p class="heading">Products</p>
+        </div>
+
+        <div class="row">
+            {{#each Product}}
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card h-100">
+                    <img src="/images/product_images/{{this._id}}.jpg" class="card-img-top"
+                        alt="{{this.name}}">
+                    <div class="col item-head p-2 d-flex justify-content-center">{{this.name}}- ₹{{this.price}}
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{this.description}}</p>
+                    </div>
+                    <div class="card-footer">
+                        {{!-- <a href="/add-to-cart/{{this._id}}
+                        " class="btn btn-success col-12">Add to Cart</a>
+                         --}}
+                        <button class="btn btn-success col-12"       
+                        onclick="addToCart('{{this._id}}')"
+                        > Add to Cart</button>
+                    
+                        
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+        
+</section>
+

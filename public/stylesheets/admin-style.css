@@ -1,0 +1,48 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+.display-image {
+  width: 90px;
+}
+.font-awesome-action {
+  text-decoration: none;
+  font-size: 30px;
+  transition: color 0.5s;
+}
+.font-awesome-action:hover {
+  color: red;
+}
+
+.edit-product-image {
+  width: 364px;
+  height: 265px;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

@@ -1,0 +1,38 @@
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Payment</th>
+                <th scope="col">View</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each  userOrders}}
+            <tr style="font-size: 15px;">
+            
+                <td style="font-size: 15px; width: 230px;">{{this.date}}</td>
+                <td style="font-size: 15px;">{{this.deliveryDetails.name}}</td>
+                <td style="font-size: 15px;">
+                    {{this.deliveryDetails.address}}
+                </td>
+                <td style="font-size: 15px;">
+                    {{this.totalAmount}}
+                </td>
+                <td style="font-size: 15px;">
+
+                    {{this.status}}
+
+                </td>
+                <td><a style="font-size: 15px;" class="btn btn-primary" href="/view-ordered-products/{{this._id}}">View
+                        Products</a></td>
+            </tr>
+            {{/each}}
+
+        </tbody>
+    </table>
+</div>

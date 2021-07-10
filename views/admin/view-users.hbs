@@ -1,0 +1,43 @@
+<div class="container mt-5">
+
+  <table class="display" id="view-users">
+    <thead>
+      <tr>
+        <th scope="col">Username</th>
+        <th scope="col">Mobile Number</th>
+        <th scope="col">Email Address</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each users}}
+        <tr>
+          <td>{{this.username}}</td>
+          <td>{{this.mobile}}</td>
+          <td>{{this.email}}</td>
+          <td>
+            <a
+              href="/admin/edit_user/{{this._id}}"
+              onclick="return confirm('Are you want to edit this {{this.username}} user account ?')"
+              data-toggle="tooltip"
+              title="Edit User Details"
+            >
+              <i class="far fa-edit font-awesome-action"></i>
+            </a>
+            <a
+              href="/admin/delete_user/{{this._id}}"
+              onclick="return confirm('Are you want to delete this {{this.username}} account ?')"
+              data-toggle="tooltip"
+              title="Delete User Account!"
+            >
+              <i class="far fa-trash-alt font-awesome-action"></i>
+            </a>
+
+          </td>
+
+        </tr>
+      {{/each}}
+
+    </tbody>
+  </table>
+</div>
