@@ -6,7 +6,6 @@ const nameCollection = require("../configuration/collection");
 const { resolve, reject } = require("promise");
 const ObjectId = require("mongodb").ObjectID;
 const Bycript = require("bcrypt");
-
 module.exports = {
   doLogin: (adminData) => {
     return new Promise(async (resolve, reject) => {
